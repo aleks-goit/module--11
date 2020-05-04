@@ -1,0 +1,337 @@
+
+%list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+%section__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@mixin font-settings($color, $ff, $fw, $fs, $lh) {
+    color: $color;
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+}
+
+.header {
+    background-image: url('images/Layer15.jpg');
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+}
+
+.cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: $primary-gradient;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding-bottom: 160px;
+}
+
+.nav__logo {
+    align-self: center;
+    padding-left: 2px;
+    @include font-settings($primary-color_white, $mont-bold, 700, 30px, 1.2);
+    text-decoration: none;
+}
+
+.nav__list {
+    @extend %list;
+    display: flex;
+    align-self: flex-end;
+    width: 620px;
+    justify-content: space-between;
+}
+
+.nav__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.2s;
+    @include font-settings($primary-color_white, $mont-semibold, 600, 14px, 1.2);
+
+    &:hover {
+        color: $primary-color_yellow;
+    }
+}
+
+.nav__link::after  {
+    background-color: transparent;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 3px;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.nav__link:hover::after {
+    background-color: $primary-color_yellow;
+}
+
+.nav__linka {
+    fill: $primary-color_white;
+    transition: 0.2s;
+
+    &:hover {
+    fill: $primary-color_yellow;
+    }
+}
+
+.section__welcome {
+    padding-bottom: 220px;
+}
+
+.section__title--welcome {
+    @include font-settings($primary-color_white, $mont-bold, 700, 150px, 140px);
+    display: block;
+    width: 820px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.section__span-welcome {
+    @include font-settings($primary-color_white, $kaushan, 400, 72px, 1.2);
+    display: block;
+    text-transform: initial;
+    padding-bottom: 42px;
+    text-align: center;
+}
+
+.section__btn {
+    @include font-settings($primary-color_white, $mont-bold, 700, 14px, 1.2);
+    background-color: transparent;
+    border: 3px solid $primary-color_white;
+    padding: 12px 30px;
+    display: flex;
+    margin: 0 auto;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary-color_coral;
+    }
+}
+
+// AMAZING SERVICES
+
+.section {
+    margin-bottom: 90px;
+}
+
+.section__title {
+    @include font-settings($primary-color_black, $mont-bold, 700, 30px, 1.2);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 45px;
+
+    &::after {
+        display: block;
+        content: "";
+        background-color: $primary-color_coral;
+        height: 3px;
+        width: 60px;
+        margin: 35px 570px 0;
+    }
+}
+
+.section__span-title {
+    @include font-settings($primary-color_black, $kaushan, 400, 24px, 1.2);
+    display: block;
+    text-transform: initial;
+    padding-bottom: 14px;
+}
+
+.section__list {
+    @extend %list;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section__item--service {
+    position: relative;
+    padding-left: 82px;
+    margin-bottom: 100px;
+}
+
+.section__item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}
+
+.section__icon {
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.section__item-title {
+    @include font-settings($primary-color_black, $mont-semibold, 600, 14px, 1.2);
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.section__item-about {
+    @include font-settings($primary-color_gray, $roboto-regular, 400, 15px, 24px);
+    text-align: left;
+    margin: 0;
+    width: 300px;
+}
+
+//TEAM
+
+.section__about {
+    @include font-settings($primary-color_gray, $roboto-regular, 400, 15px, 1.2);
+    width: 980px;
+    margin: 0 auto;
+    margin-bottom: 90px;
+    text-align: center;
+}
+
+.section__list--team {
+    @extend %list;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section__item--team {
+    width: 380px; 
+}
+
+.section__item-avatar-wrap {
+    position: relative;
+    box-shadow: 0 0 0 #95e1d3;
+    transition: 0.2s;
+}
+
+.section__item-avatar-wrap:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px #95e1d3;
+}
+
+.section__item-avatar {
+    display: block;
+    width: 100%;
+}
+
+.section__social-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: $primary-gradient;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.section__social-list {
+    @extend %list;
+    display: flex;
+}
+
+.section__social-item {
+    margin-right: 1px;
+    background-color: $primary-color_yellow;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.section__social-link {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: $primary-color_coral;
+    transition: 0.35s;
+
+    &:hover {
+        background-color: $primary-color_coral;
+        fill: $primary-color_white;
+    }
+}
+
+.section__social-wrap:hover {
+    opacity: 1;
+}
+
+.section__item-name {
+    @include font-settings($primary-color_black, $mont-semibold, 600, 14px, 1.2);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.section__item-position {
+    @include font-settings($primary-color_gray, $roboto-lightitalic, 400, 15px, 24px);
+    text-align: center;
+}
+
+//FOOTER 
+
+.footer__content {
+    border-top: 1px solid $primary-color_lightgray;
+    height: 64px;
+    display: flex;
+    position: relative;
+}
+
+.footer p {
+    @include font-settings($primary-color_black, $mont-bold, 600, 14px, 1.2);
+    margin: 0;
+    padding-top: 30px;
+}
+
+.footer span {
+    color: $primary-color_coral;
+}
+
+.input {
+    @include font-settings($primary-color_lightgray, $roboto-lightitalic, 300, 15px, 1.2);
+    position: absolute;
+    border: 1px solid $primary-color_lightgray;
+    top: 12px;
+    right: 149px;
+    width: 229px;
+    height: 32px;
+}
+
+.input::placeholder {
+    @include font-settings($primary-color_lightgray, $roboto-lightitalic, 300, 15px, 1.2);
+}
+
+.button__subscribe {
+    @include font-settings($primary-color_white, $mont-bold, 700, 14px, 1.2);
+    text-transform: uppercase;
+    border: none;
+    background-color: $primary-color_seagreen;
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 150px;
+    height: 36px;
+    cursor: pointer;
+}

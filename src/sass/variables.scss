@@ -1,0 +1,18 @@
+// COLORS
+$primary-color_white: #ffffff;
+$primary-color_yellow: #fce38a;
+$primary-color_black: #333333;
+$primary-color_coral: #f38181;
+$primary-color_lightgray: #cccccc;
+$primary-color_gray: #999999;
+$primary-color_seagreen: #95e1d3;
+$primary-gradient: linear-gradient(to top, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9));
+
+@import 'fonts.scss';
+
+// FONTS
+$mont-bold: 'Montserrat__Bold', 'Arial', sans-serif;
+$mont-semibold: 'Montserrat__SemiBold', 'Arial', sans-serif;
+$roboto-lightitalic: 'Roboto__LightItalic', 'Arial', sans-serif;
+$roboto-regular: 'Roboto__Regular', 'Arial', sans-serif;
+$kaushan: 'KaushanScript__Regular', 'Arial', sans-serif;
