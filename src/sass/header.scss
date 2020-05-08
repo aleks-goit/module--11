@@ -1,0 +1,68 @@
+.header {
+    background-image: url('/images/Layer15.jpg');
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+}
+
+.cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: $primary-gradient;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding-bottom: 160px;
+}
+
+.nav__logo {
+    align-self: center;
+    padding-left: 2px;
+    @include font-settings($primary-color_white, $mont-bold, 700, 30px, 1.2);
+    text-decoration: none;
+}
+
+.nav__list {
+    @extend %list;
+    display: flex;
+    align-self: flex-end;
+    width: 620px;
+    justify-content: space-between;
+}
+
+.nav__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.2s;
+    @include font-settings($primary-color_white, $mont-semibold, 600, 14px, 1.2);
+
+    &:hover {
+        color: $primary-color_yellow;
+    }
+}
+
+.nav__link::after  {
+    background-color: transparent;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 3px;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.nav__link:hover::after {
+    background-color: $primary-color_yellow;
+}
+
+.nav__linka {
+    fill: $primary-color_white;
+    transition: 0.2s;
+
+    &:hover {
+    fill: $primary-color_yellow;
+    }
+}

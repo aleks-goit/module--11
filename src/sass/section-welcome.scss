@@ -1,0 +1,36 @@
+.section__welcome {
+    padding-bottom: 220px;
+}
+
+.section__title--welcome {
+    @include font-settings($primary-color_white, $mont-bold, 700, 150px, 140px);
+    display: block;
+    width: 820px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.section__span-welcome {
+    @include font-settings($primary-color_white, $kaushan, 400, 72px, 1.2);
+    display: block;
+    text-transform: initial;
+    padding-bottom: 42px;
+    text-align: center;
+}
+
+.section__btn {
+    @include font-settings($primary-color_white, $mont-bold, 700, 14px, 1.2);
+    background-color: transparent;
+    border: 3px solid $primary-color_white;
+    padding: 12px 30px;
+    display: flex;
+    margin: 0 auto;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary-color_coral;
+    }
+}

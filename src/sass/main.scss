@@ -5,5 +5,17 @@
 @import 'normalize.scss';
 @import 'base.scss';
 @import 'variables.scss';
+
+//CONTAINER
 @import 'container.scss';
-@import 'styles.scss';
+
+//HELPERS
+@import 'helpers.scss';
+
+// BODY
+@import 'header.scss';
+@import 'section-welcome.scss';
+@import 'section-services.scss';
+@import 'section-team.scss';
+@import 'footer.scss';
+

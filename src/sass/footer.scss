@@ -1,0 +1,43 @@
+.footer__content {
+    border-top: 1px solid $primary-color_lightgray;
+    height: 64px;
+    display: flex;
+    position: relative;
+}
+
+.footer p {
+    @include font-settings($primary-color_black, $mont-bold, 600, 14px, 1.2);
+    margin: 0;
+    padding-top: 30px;
+}
+
+.footer span {
+    color: $primary-color_coral;
+}
+
+.input {
+    @include font-settings($primary-color_lightgray, $roboto-lightitalic, 300, 15px, 1.2);
+    position: absolute;
+    border: 1px solid $primary-color_lightgray;
+    top: 12px;
+    right: 149px;
+    width: 229px;
+    height: 32px;
+}
+
+.input::placeholder {
+    @include font-settings($primary-color_lightgray, $roboto-lightitalic, 300, 15px, 1.2);
+}
+
+.button__subscribe {
+    @include font-settings($primary-color_white, $mont-bold, 700, 14px, 1.2);
+    text-transform: uppercase;
+    border: none;
+    background-color: $primary-color_seagreen;
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 150px;
+    height: 36px;
+    cursor: pointer;
+}
